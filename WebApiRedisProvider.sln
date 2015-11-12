@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiRedisProvider", "WebApiRedisProvider\WebApiRedisProvider.csproj", "{89EA7AD6-72B3-4821-9655-38A434DF57B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiRedisProvider.Tests", "WebApiRedisProvider.Tests\WebApiRedisProvider.Tests.csproj", "{1C5D40A2-FB77-421D-8701-BE5E82BD4732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89EA7AD6-72B3-4821-9655-38A434DF57B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89EA7AD6-72B3-4821-9655-38A434DF57B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89EA7AD6-72B3-4821-9655-38A434DF57B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89EA7AD6-72B3-4821-9655-38A434DF57B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5D40A2-FB77-421D-8701-BE5E82BD4732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5D40A2-FB77-421D-8701-BE5E82BD4732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5D40A2-FB77-421D-8701-BE5E82BD4732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5D40A2-FB77-421D-8701-BE5E82BD4732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
