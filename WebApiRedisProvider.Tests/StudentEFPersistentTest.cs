@@ -55,7 +55,7 @@ namespace WebApiRedisProvider.Tests
         {
             _repository.Delete(1);
 
-            var student = _repository.Get(1);
+            var student = _context.Database.SqlQuery<Student>("Select * From Students where Id = 1").FirstOrDefault();
 
             Assert.IsNull(student);
         }
