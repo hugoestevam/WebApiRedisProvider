@@ -112,14 +112,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DbVsRedisComparison.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\StudentsEFController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructures\RedisCacheManager.cs" />
     <Compile Include="Infrastructures\StudentDbContext.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IStudentRepository.cs" />
+    <Compile Include="Repositories\StudentRedisRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
