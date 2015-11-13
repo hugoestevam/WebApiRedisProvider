@@ -1,51 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using WebApiRedisProvider.Models;
-using ServiceStack.Redis;
-using ServiceStack.Redis.Generic;
 using WebApiRedisProvider.Repositories;
 
 namespace WebApiRedisProvider.Controllers
 {
-    public class StudentsController : ApiController
+    public class StudentsEFController : ApiController
     {
-        private IStudentRepository repository; 
+        private IStudentRepository repository;
 
-        public StudentsController()
+        public StudentsEFController()
         {
-            repository = new StudentRedisRepository();
-
+            repository = new StudentRepository();
         }
 
-        // GET: api/Students
+        // GET: api/StudentsEF
         public IEnumerable<Student> Get()
         {
-            return repository.GetAll();            
+            return repository.GetAll();
         }
 
-        // GET: api/Students/5
+        // GET: api/StudentsEF/5
         public Student Get(int id)
-        {            
+        {
             return repository.Get(id);
         }
 
-        // POST: api/Students
+        // POST: api/StudentsEF
         public void Post([FromBody]Student value)
         {
             repository.Add(value);
         }
 
-        // PUT: api/Students/5
+        // PUT: api/StudentsEF/5
         public void Put(int id, [FromBody]Student value)
         {
-            var student = repository.Get(id);
-            if (student != null)
-                repository.Update(value);
+            repository.Update(value);
         }
 
-        // DELETE: api/Students/5
+        // DELETE: api/StudentsEF/5
         public void Delete(int id)
         {
             repository.Delete(id);
