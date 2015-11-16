@@ -18,6 +18,7 @@ namespace WebApiRedisProvider.Controllers
             repository = new StudentRepository();
         }
 
+        [Authorize]
         // GET: api/StudentsEF
         public IEnumerable<Student> Get()
         {

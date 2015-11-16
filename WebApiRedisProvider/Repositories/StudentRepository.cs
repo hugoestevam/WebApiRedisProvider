@@ -9,7 +9,7 @@ using WebApiRedisProvider.Models;
 
 namespace WebApiRedisProvider.Repositories
 {
-    public class StudentRepository : IStudentRepository
+    public class StudentRepository : IStudentRepository, IDisposable
     {
         private StudentDbContext db;
         public StudentRepository()
@@ -51,6 +51,12 @@ namespace WebApiRedisProvider.Repositories
             entry.State = EntityState.Modified;
             db.SaveChanges();          
             return entry.Entity;
+        }
+
+
+        public void Dispose()
+        {
+            db.Dispose();
         }
     }
 }

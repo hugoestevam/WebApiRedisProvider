@@ -9,7 +9,7 @@ using WebApiRedisProvider.Models;
 
 namespace WebApiRedisProvider.Repositories
 {
-    public class StudentRedisRepository : IStudentRepository
+    public class StudentRedisRepository : IStudentRepository, IDisposable
     {
         private readonly RedisClient redis;
         private IRedisTypedClient<Student> redisStudents;
@@ -44,6 +44,11 @@ namespace WebApiRedisProvider.Repositories
         public Student Update(Student student)
         {
             return redisStudents.Store(student);
+        }
+        
+        public void Dispose()
+        {
+            redis.Dispose();            
         }
     }
 }
