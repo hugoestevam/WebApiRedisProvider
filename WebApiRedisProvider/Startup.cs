@@ -15,11 +15,13 @@ namespace WebApiRedisProvider
     {
         public void Configuration(IAppBuilder app)
         {
+            
             ConfigureOAuth(app);
 
             HttpConfiguration config = new HttpConfiguration();
+            
             WebApiConfig.Register(config);
-            app.UseCors(CorsOptions.AllowAll);
+                   
             app.UseWebApi(config);
 
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<StudentDbContext>());
@@ -27,6 +29,7 @@ namespace WebApiRedisProvider
 
         public void ConfigureOAuth(IAppBuilder app)
         {
+
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,

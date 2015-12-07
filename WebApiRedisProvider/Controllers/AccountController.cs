@@ -74,7 +74,7 @@ namespace WebApiRedisProvider.Controllers
                     // No ModelState errors are available to send, so just return an empty BadRequest.
                     return BadRequest();
                 }
-
+                
                 return BadRequest(ModelState);
             }
 

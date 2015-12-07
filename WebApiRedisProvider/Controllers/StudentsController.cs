@@ -16,7 +16,7 @@ namespace WebApiRedisProvider.Controllers
         public StudentsController()
         {
             repository = new StudentRedisRepository();
-
+             
         }
 
         // GET: api/Students
