@@ -16,7 +16,7 @@ namespace WebApiRedisProvider.Repositories
 
         public StudentRedisRepository()
         {
-            redis = new RedisClient("ndd.redis.cache.windows.net", 6379, "W7eXZLH8cqlhaOJeTwJgsYVtenbqnibQKFZN3wdaUk0=");
+            redis = new RedisClient("localhost", 6379);
             redisStudents = redis.As<Student>();
         }
 
